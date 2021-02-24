@@ -52,6 +52,7 @@ Method to use in 2: track/test (not present in API doc)
 - `package_ids.txt` should be in the root folder 
 - `merged_labels.pdf` should be in root folder
 - log files `sms.txt` & `emails.txt` should be in root folder
+- `courier/create-pre-routing` is limited to 1 request per 5 seconds. You should find a way how to deal with it.
 
 ## Submitting
 The result is accepted as a *pull request in the fork* of this repository.
