@@ -1,13 +1,14 @@
 # PHP developer recruitment task
 Aim of this task is to order a package label using our API with provided data, also to process the response and to get information from tracking using and process the response according to TO DO section (2)
-​
+
+
 *Code should follow SOLID principles, but not over complicated, be readable*
-​
+
+
 *Feel free to use libraries*
 ​
 ​
 ## TO DO
-​
 ### 1) Write a PHP CLI script which will do the following:
 1. Reads data from two csv files. Can be found in `/source` folder 
 2. Fires requests to Świat Przesyłek API to create couriers for provided lines. One request for each line. 
@@ -16,7 +17,6 @@ Aim of this task is to order a package label using our API with provided data, a
 ​
 ​
 ### 2) Write a PHP CLI script which will do the following:
-​
 1. Reads statuses from test tracking endpoint
 2. In case if date of last status is not older than 12 hours (`date` field), you should emulate email sending (save last status as one line into file called `emails.txt` in format: `package id`;`status map name`;`date` )
 3. In case if date of last status is not older than 12 hours (`date` field), it is `DELIVERED` and there is daytime in destination country (`country_to` field)*, you should emulate sms sending (save  `package id`;`status map name`;`date` to file called `sms.txt`)
@@ -47,7 +47,6 @@ Environment: production
 Method to use in 1: courier/create-pre-routing
 Method to use in 2: track/test (not present in API doc)
 ```
-​
 ## Checklist
 - Labels should be saved in folder `/labels/<Today_date_in_DmY_format>/` and be rotated 90 degrees clockwise
 - `package_ids.txt` should be in the root folder 
