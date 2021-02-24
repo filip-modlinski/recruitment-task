@@ -7,14 +7,17 @@ Aim of this task is to order a package label using our API with provided data, a
 
 
 ## TO DO
-1) Write a PHP CLI script which will do the following:
+
+### 1) Write a PHP CLI script which will do the following:
 1. Reads data from two csv files. Can be found in `/source` folder 
 2. Fires requests to Świat Przesyłek API to create couriers for provided lines. One request for each line. 
 3. Retrieves labels (PNG) and package ids, saves labels it in `/labels` directory with random name and all package ids in one file `package_ids.txt` files in the format: `PACKAGE_ID:LABEL_NAME`
 4. After retrieving labels all labels should be merged in one pdf file in root folder 
-2) There is an endpoint in API which returns random information about tracking. In `stat_map_history` you will find history of status maps. Dictionary for ids you can find in API doc.
 
-Write a PHP CLI script which will do the following:
+
+  There is an endpoint in API which returns random information about tracking. In `stat_map_history` you will find history of status maps. Dictionary for ids you can find in API doc.
+
+### 2) Write a PHP CLI script which will do the following:
 1. Reads statuses from this endpoint  https://api.swiatprzesylek.pl/V1/track/test
 2. In case if date of last status is not older than than 12 hours (`date` field), you should emulate email sending (save last status as one line into file called `emails.txt` in format: `package id`;`status map name`;`date` )
 3. I In case if date of last status is not older than than 12 hours (`date` field), it is `DELIVERED` and there is daytime in destination country (`country_to` field)*, you should emulate sms sending (save  `package id`;`status map name`;`date` to file called `sms.txt`)
